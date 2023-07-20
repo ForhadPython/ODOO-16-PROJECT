@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.reports.action.data,access_reports_action_data,custom_reports.model_reports_action_data,base.group_user,1,1,1,1
+access.foot.nonfoot.report.wizard,access_foot_nonfoot_report_wizard,custom_reports.model_foot_nonfoot_report_wizard,base.group_user,1,1,1,1
+
+
