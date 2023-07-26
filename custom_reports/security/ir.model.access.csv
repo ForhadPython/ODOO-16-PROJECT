@@ -1,5 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access.reports.action.data,access_reports_action_data,custom_reports.model_reports_action_data,base.group_user,1,1,1,1
 access.foot.nonfoot.report.wizard,access_foot_nonfoot_report_wizard,custom_reports.model_foot_nonfoot_report_wizard,base.group_user,1,1,1,1
+access.example.xlsx.wizard,access_example_xlsx_wizard,custom_reports.model_example_xlsx_wizard,base.group_user,1,1,1,1
+access.damo.excel.test.report.wizard,access_damo_excel_test_report_wizard,custom_reports.model_damo_excel_test_report_wizard,base.group_user,1,1,1,1
+access.mobile.data.report.wizard,access_mobile_data_report_wizard,custom_reports.model_mobile_data_report_wizard,base.group_user,1,1,1,1
+
 
 

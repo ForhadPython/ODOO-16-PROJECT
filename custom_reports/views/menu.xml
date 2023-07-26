@@ -19,7 +19,7 @@
               sequence="0"/>
 
     <menuitem id="menu_reports_master"
-              name="Bay All Reports"
+              name="Reports"
               parent="menu_bay_reports"
               sequence="0"/>
 
@@ -28,5 +28,4 @@
               action="action_reports_action_data"
               parent="menu_bay_reports"
               sequence="0"/>
-
 </odoo>

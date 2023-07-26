@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="mobile_data_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">Mobile Data Report Wizard View Form</field>
+            <field name="model">mobile.data.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Mobile Data Report">
+                    <group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                         <group>
+							 <field name="excel_file" readonly="1" filename="file_name"/>
+                    	     <field name="file_name" invisible="1"/>
+						 </group>
+                    </group>
+                    <footer>
+                        <button name="generate_mobile_data_excel_report" string="Generate Excel Report" type="object" class="btn-primary"/>
+                          or
+                        <button string="Cancel" class="btn-danger" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="mobile_data_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Mobile Data Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mobile.data.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="mobile_data_report_wiz_menu" name="Mobile Data Report"
+                  parent="menu_reports_root" action="mobile_data_report_wizard_action"
+                  sequence="40"/>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_damo_excel_xlsx" model="ir.actions.report">
+        <field name="name">Print Damo Excel Test Reports Excel</field>
+        <field name="model">damo.excel.test.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.report_damo_excel_xlsx</field>
+        <field name="report_file">custom_reports.report_damo_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

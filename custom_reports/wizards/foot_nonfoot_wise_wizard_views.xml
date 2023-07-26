@@ -33,7 +33,6 @@
 			<field name="type">ir.actions.act_window</field>
 			<field name="res_model">foot.nonfoot.report.wizard</field>
 			<field name="view_mode">form</field>
-<!--			<field name="view_id" ref="foot_nonfoot_rep_wiz_view_form" />-->
 			<field name="target">new</field>
 		</record>
 

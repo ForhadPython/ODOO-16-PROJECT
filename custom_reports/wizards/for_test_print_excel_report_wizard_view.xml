@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="example_xlsx_report_view" model="ir.ui.view">
+       <field name="name">Print Damo Excel Test Reports</field>
+       <field name="model">damo.excel.test.report.wizard</field>
+       <field name="arch" type="xml">
+           <form string="Report Options">
+               <group>
+                   <field name="data_from"/>
+                   <field name="data_to"/>
+               </group>
+
+               <footer>
+                   <button name="action_print_excel_report" string="Generate Report" type="object" class="oe_highlight"/>
+                   <button string="Cancel" class="btn-danger"  special="cancel"/>
+               </footer>
+           </form>
+       </field>
+   </record>
+
+
+   <record id="action_damo_excel_test_report" model="ir.actions.act_window">
+       <field name="name">Print Damo Excel Test Reports</field>
+       <field name="res_model">damo.excel.test.report.wizard</field>
+       <field name="type">ir.actions.act_window</field>
+       <field name="view_mode">form</field>
+       <field name="target">new</field>
+   </record>
+   <menuitem id="damo_excel_reports_menus" name="Print Damo Excel Test Reports"
+              parent="menu_reports_root" action="action_damo_excel_test_report" sequence="30"/>
+</odoo>
