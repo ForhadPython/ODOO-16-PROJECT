@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="send_received_wizard_form_view" model="ir.ui.view">
+            <field name="name">send.received.report.wizard.view.form</field>
+            <field name="model">send.received.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Inter Transfer Re-Grouping">
+                    <group>
+                        <group>
+                            <field name="article_id"/>
+                            <field name="down_to"/>
+                        </group>
+                        <group>
+                            <field name="store_zone_id" />
+                            <field name="location_id"/>
+                        </group>
+                         <group>
+							 <field name="excel_file" readonly="1" filename="file_name"/>
+                    	     <field name="file_name" invisible="1"/>
+						 </group>
+                    </group>
+                    <footer>
+                        <button name="generate_send_received_excel_report" string="Generate Excel Report" type="object"
+                                class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-danger" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="send_received_wizard_action" model="ir.actions.act_window">
+            <field name="name">Inter Transfer Re-Grouping</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">send.received.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="send_received_wizard_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="send_received_wizard_menu" name="Inter Transfer Re-Grouping"
+                  parent="menu_reports_root" action="send_received_wizard_action"
+                  sequence="50"/>
+    </data>
+</odoo>

@@ -13,6 +13,7 @@
         'wizards/inventory_stock_report_wizard_views.xml',
         'wizards/for_test_print_excel_report_wizard_view.xml',
         'wizards/mobile_data_wizard_views.xml',
+        'wizards/send_received_report_wizard_views.xml',
         'report/report.xml',
     ],
     'application': True,
