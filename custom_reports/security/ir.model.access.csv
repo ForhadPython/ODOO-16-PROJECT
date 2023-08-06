@@ -4,6 +4,10 @@ access.foot.nonfoot.report.wizard,access_foot_nonfoot_report_wizard,custom_repor
 access.example.xlsx.wizard,access_example_xlsx_wizard,custom_reports.model_example_xlsx_wizard,base.group_user,1,1,1,1
 access.damo.excel.test.report.wizard,access_damo_excel_test_report_wizard,custom_reports.model_damo_excel_test_report_wizard,base.group_user,1,1,1,1
 access.mobile.data.report.wizard,access_mobile_data_report_wizard,custom_reports.model_mobile_data_report_wizard,base.group_user,1,1,1,1
+access.send.received.report.wizard,access_send_received_report_wizard,custom_reports.model_send_received_report_wizard,base.group_user,1,1,1,1
+access.inventory.stock.report.datewise.wizard,access_inventory_stock_report_datewise_wizard,custom_reports.model_inventory_stock_report_datewise_wizard,base.group_user,1,1,1,1
+access.current.stock.barcode.report.wizard,access_current_stock_barcode_report_wizard,custom_reports.model_current_stock_barcode_report_wizard,base.group_user,1,1,1,1
+access.point.report.wizard,access_point_report_wizard,custom_reports.model_point_report_wizard,base.group_user,1,1,1,1
 
 
 

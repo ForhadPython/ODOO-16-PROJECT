@@ -19,15 +19,10 @@ class SendReceivedReportWizard(models.TransientModel):
     excel_file = fields.Binary('Excel Report')
     file_name = fields.Char('Excel File', size=64)
 
-    @api.model
-    def _def_current_date(self):
-        """:return current date"""
-        return fields.Date.today()
+    location_id = fields.Char(string="Shop")
 
-    location_id = fields.Many2one(string="Shop")
-
-    store_zone_id = fields.Many2one(string="Territory")
-    article_id = fields.Many2one(string='Article', required=False, ondelete='cascade')
+    store_zone_id = fields.Char(string="Territory")
+    article_id = fields.Char(string='Article', required=False)
     down_to = fields.Float(string="Down To (%)", required=False, default='40')
 
     def generate_send_received_excel_report(self):

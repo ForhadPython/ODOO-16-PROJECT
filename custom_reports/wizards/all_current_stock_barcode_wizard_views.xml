@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="current_stock_barcode_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">current.stock.barcode.report.wizard.view.form</field>
+            <field name="model">current.stock.barcode.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Current Stock Barcode Report">
+                    <group>
+                         <group>
+							 <field name="excel_file" readonly="1" filename="file_name"/>
+                    	     <field name="file_name" invisible="1"/>
+						 </group>
+                    </group>
+                    <footer>
+                          <button name="current_stock_barcode_excel_report" string="Generate Excel Report" type="object"
+                                class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-danger" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="current_stock_barcode_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Current Stock Barcode Report</field>
+             <field name="res_model">current.stock.barcode.report.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="current_stock_barcode_report_wizard_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="current_stock_barcode_report_wiz_menu" name="Current Stock Barcode Report"
+                  parent="menu_reports_root" action="current_stock_barcode_report_wizard_action"
+                  sequence="50"/>
+    </data>
+</odoo>

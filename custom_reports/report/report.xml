@@ -20,14 +20,23 @@
         <field name="binding_type">report</field>
     </record>
 
-<!--    <record id="report_mobile_data_excel_xlsx" model="ir.actions.report">-->
-<!--        <field name="name">Mobile Data Reports Excel</field>-->
-<!--        <field name="model">mobile.data.report.wizard</field>-->
-<!--        <field name="report_type">xlsx</field>-->
-<!--        <field name="report_name">custom_reports.report_mobile_data_excel_xlsx</field>-->
-<!--        <field name="report_file">custom_reports.report_mobile_data_excel_xlsx</field>-->
-<!--        <field name="binding_type">report</field>-->
-<!--    </record>-->
+    <!--    <record id="report_mobile_data_excel_xlsx" model="ir.actions.report">-->
+    <!--        <field name="name">Mobile Data Reports Excel</field>-->
+    <!--        <field name="model">mobile.data.report.wizard</field>-->
+    <!--        <field name="report_type">xlsx</field>-->
+    <!--        <field name="report_name">custom_reports.report_mobile_data_excel_xlsx</field>-->
+    <!--        <field name="report_file">custom_reports.report_mobile_data_excel_xlsx</field>-->
+    <!--        <field name="binding_type">report</field>-->
+    <!--    </record>-->
+
+    <record id="report_all_current_stock_excel_xlsx" model="ir.actions.report">
+        <field name="name">Current Stock Barcode Report Excel</field>
+        <field name="model">current.stock.barcode.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.report_all_current_stock_excel_xlsx</field>
+        <field name="report_file">custom_reports.report_all_current_stock_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
 
 
 </odoo>

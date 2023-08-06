@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Stock Transfer Menu -->
+		<record id="inventory_stock_datewise_report_view_wizard" model="ir.ui.view">
+			<field name="name">Shop Wise Stock Statement Report</field>
+			<field name="model">inventory.stock.report.datewise.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Shop Wise Stock Statement">
+					<group>
+						<group>
+							<field name="start_date" />
+							<field name="end_date" />
+						</group>
+						<group>
+							<field name="store_zone_id"/>
+							<field name="source_loc_id" />
+							<field name="product_cat_id" />
+							<field name="is_packaging"  />
+						</group>
+					</group>
+					<footer>
+						<button name="action_inventory_stock_report" string="Generate Report"
+							type="object" class="oe_highlight" />
+						or
+						<button string="Cancel" class="btn-danger" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_wizard_datewize_inventory_stock_report" model="ir.actions.act_window">
+			<field name="name">Shop Wise Stock Statement Report</field>
+			<field name="res_model">inventory.stock.report.datewise.wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_action_wizard_inventory_stock_datewise_report"
+			action="action_wizard_datewize_inventory_stock_report" parent="menu_reports_root"
+			sequence="14" />
+
+
+	</data>
+</odoo>
