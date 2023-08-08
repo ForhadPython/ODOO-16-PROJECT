@@ -8,6 +8,11 @@ access.send.received.report.wizard,access_send_received_report_wizard,custom_rep
 access.inventory.stock.report.datewise.wizard,access_inventory_stock_report_datewise_wizard,custom_reports.model_inventory_stock_report_datewise_wizard,base.group_user,1,1,1,1
 access.current.stock.barcode.report.wizard,access_current_stock_barcode_report_wizard,custom_reports.model_current_stock_barcode_report_wizard,base.group_user,1,1,1,1
 access.point.report.wizard,access_point_report_wizard,custom_reports.model_point_report_wizard,base.group_user,1,1,1,1
+access.account.payment.transaction.report.wizard,access_account_payment_transaction_report_wizard,custom_reports.model_account_payment_transaction_report_wizard,base.group_user,1,1,1,1
+access.account.payment.support.report.wizard,access_account_payment_support_report_wizard,custom_reports.model_account_payment_support_report_wizard,base.group_user,1,1,1,1
+access.daily.sales.datewise.wizard,access_daily_sales_datewise_wizard,custom_reports.model_daily_sales_datewise_wizard,base.group_user,1,1,1,1
+
+
 
 
 

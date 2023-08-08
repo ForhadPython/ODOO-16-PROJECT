@@ -38,5 +38,40 @@
         <field name="binding_type">report</field>
     </record>
 
+<!--    <record id="account_payment_transaction_excel_xlsx" model="ir.actions.report">-->
+<!--        <field name="name">Account Payment Transaction Report Excel</field>-->
+<!--        <field name="model">account.payment.transaction.report.wizard</field>-->
+<!--        <field name="report_type">xlsx</field>-->
+<!--        <field name="report_name">custom_reports.report_account_payment_transaction_excel_xlsx</field>-->
+<!--        <field name="report_file">custom_reports.report_account_payment_transaction_excel_xlsx</field>-->
+<!--        <field name="binding_type">report</field>-->
+<!--    </record>-->
+
+    <record id="payment_transaction_excel_xlsx" model="ir.actions.report">
+        <field name="name">Account Payment Transaction Report Excel</field>
+        <field name="model">account.payment.transaction.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.payment_transaction_excel_xlsx</field>
+        <field name="report_file">custom_reports.payment_transaction_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="payment_support_excel_xlsx" model="ir.actions.report">
+        <field name="name">Account Payment Support Report Excel</field>
+        <field name="model">account.payment.support.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.payment_support_excel_xlsx</field>
+        <field name="report_file">custom_reports.payment_support_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="daily_sales_datewise_excel_xlsx" model="ir.actions.report">
+        <field name="name">Daily Sales Datewise Report Excel</field>
+        <field name="model">daily.sales.datewise.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.daily_sales_datewise_excel_xlsx</field>
+        <field name="report_file">custom_reports.daily_sales_datewise_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
 
 </odoo>

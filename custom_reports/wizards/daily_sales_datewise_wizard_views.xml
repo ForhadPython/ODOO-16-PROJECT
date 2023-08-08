@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="daily_sale_dt_wiz_view_form" model="ir.ui.view">
+			<field name="name">daily.sales.dt.wizard.form</field>
+			<field name="model">daily.sales.datewise.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Daily Sales Datewise Report">
+					<group name ='main'>
+						<group>
+							<field name="start_date" string="From Date" />
+							<field name="end_date" string="To Date" />
+							<field name="check" string="With Shop"/>
+						</group>
+						<group>
+							<field name="store_zone_id"/>
+							<field name="shop_loc_id" />
+						</group>
+
+					</group>
+					<footer>
+						<button name="daily_ales_date_wise_generate_report" string="Generate Excel Report" type="object"
+                                class="btn-primary"/>
+
+						or
+
+						<button string="Cancel" class="btn-danger" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+
+		<record id="daily_sales_dt_wiz_action" model="ir.actions.act_window">
+			<field name="name">Daily Sales Date wise Report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">daily.sales.datewise.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="daily_sales_dt_wiz_menu" name="Daily Sales Datewise Report"
+			parent="menu_reports_root" action="daily_sales_dt_wiz_action"
+			sequence="70" />
+	</data>
+</odoo>

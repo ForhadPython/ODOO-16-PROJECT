@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="account_payment_transaction_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">account.payment.transaction.report.wizard.view.form</field>
+            <field name="model">account.payment.transaction.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Account Payment Transaction Report">
+                    <group>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="location_id" />
+                        </group>
+                         <group>
+							 <field name="excel_file" readonly="1" filename="file_name"/>
+                    	     <field name="file_name" invisible="1"/>
+						 </group>
+                    </group>
+                    <footer>
+                        <button name="generate_account_payment_transaction_excel_report" string="Generate Excel Report" type="object"
+                                class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-danger" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="account_payment_transaction_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Account Payment Transaction Report</field>
+            <field name="res_model">account.payment.transaction.report.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_payment_transaction_report_wizard_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="account_payment_transaction_wizard_menu" name="Account Payment Transaction Report"
+                  parent="menu_reports_root" action="account_payment_transaction_report_wizard_action"
+                  sequence="60"/>
+    </data>
+</odoo>
