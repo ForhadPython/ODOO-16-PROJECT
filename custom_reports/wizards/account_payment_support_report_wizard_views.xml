@@ -38,6 +38,10 @@
             <field name="target">new</field>
         </record>
 
+<!--        <menuitem id="account_payment_support_wizard_menu" name="Account Payment Support Report"-->
+<!--                  parent="menu_reports_root_pos_report" action="account_payment_support_report_wizard_action"-->
+<!--                  sequence="55"/>-->
+
         <menuitem id="account_payment_support_wizard_menu" name="Account Payment Support Report"
                   parent="menu_reports_root" action="account_payment_support_report_wizard_action"
                   sequence="55"/>

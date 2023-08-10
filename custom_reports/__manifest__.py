@@ -20,6 +20,7 @@
         'wizards/account_payment_transaction_report_wizard_views.xml',
         'wizards/account_payment_support_report_wizard_views.xml',
         'wizards/daily_sales_datewise_wizard_views.xml',
+        'wizards/recap_shop_report_wizard_views.xml',
         'report/report.xml',
     ],
     'application': True,

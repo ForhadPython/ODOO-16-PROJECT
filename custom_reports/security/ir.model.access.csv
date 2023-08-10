@@ -11,6 +11,7 @@ access.point.report.wizard,access_point_report_wizard,custom_reports.model_point
 access.account.payment.transaction.report.wizard,access_account_payment_transaction_report_wizard,custom_reports.model_account_payment_transaction_report_wizard,base.group_user,1,1,1,1
 access.account.payment.support.report.wizard,access_account_payment_support_report_wizard,custom_reports.model_account_payment_support_report_wizard,base.group_user,1,1,1,1
 access.daily.sales.datewise.wizard,access_daily_sales_datewise_wizard,custom_reports.model_daily_sales_datewise_wizard,base.group_user,1,1,1,1
+access.recap.shop.report.wizard,access_recap_shop_report_wizard,custom_reports.model_recap_shop_report_wizard,base.group_user,1,1,1,1
 
 
 

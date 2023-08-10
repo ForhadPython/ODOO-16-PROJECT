@@ -9,3 +9,4 @@ from . import point_report_wizard
 from . import account_payment_transaction_report_wizard
 from . import account_payment_support_report_wizard
 from . import daily_sales_datewise_wizard
+from . import recap_shop_report_wizard

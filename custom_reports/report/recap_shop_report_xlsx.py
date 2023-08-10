@@ -3,8 +3,8 @@ import io
 from odoo import models
 
 
-class DailySalesDatewiseExcelReportsXlsx(models.AbstractModel):
-    _name = 'report.custom_reports.daily_sales_datewise_excel_xlsx'
+class RecapShopReportExcelReportsXlsx(models.AbstractModel):
+    _name = 'report.custom_reports.recap_shop_report_excel_xlsx'
     _inherit = 'report.report_xlsx.abstract'
 
     def generate_xlsx_report(self, workbook, data, worksheet):
@@ -31,7 +31,7 @@ class DailySalesDatewiseExcelReportsXlsx(models.AbstractModel):
         data_style_right = workbook.add_format({'font_name': 'Arial', 'font_color': 'black', 'align': 'right'})
         data_style_left = workbook.add_format({'font_name': 'Arial', 'font_color': 'black', 'align': 'left'})
 
-        sheet.merge_range(0, 0, 1, 6, "DAILY SALES DATE WISE REPORT", header_style_top)
+        sheet.merge_range(0, 0, 1, 6, "RECAP SHOP REPORT", header_style_top)
         # for key, value in data.items():
         #     if key == 'other':
         #         sheet.merge_range(1, 1, 7, 7, "Date:", file_header_style)
@@ -42,34 +42,48 @@ class DailySalesDatewiseExcelReportsXlsx(models.AbstractModel):
         row = 4
         col = 0
 
-        sheet.merge_range(row, col, row + 1, col, "SHOP NAME", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "TYPE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "SHOP CODE", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "DEPARTMENT", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DATE", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "CAT. CODE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "PAIR SHOE", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "CATEGORY", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "PAIR TURNOVER", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "NO LINE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "PIECE NON FOOTWEAR", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "YEAR TILL DATE SALE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "NON FOOTWEAR TURNOVER", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "THIS PERIOD SALE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "PAIR/PIECE", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "UP TO THIS PERIOD SALE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "TOTAL TURNOVER", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "OPENING (WITH TRANSIT)", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "PO RECEIVE", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "CDC RECEIVE(SHOP)", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "CDC DISPATCH", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DISCOUNT PAIR SHOE", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "RECEIVE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DISCOUNT PAIR VALUE(after)", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "DISPATCH", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DISCOUNT PIECE NON FOOTWEAR", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "SHOP STOCK", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "CDC STOCK", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "DEFECTIVE", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DISCOUNT NON FOOTWEAR VALUE(after)", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "CLAIM", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "ADJUSTMENT", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "CIRCULAR", upper_header_style)
+        # col = col + 1
+        # sheet.merge_range(row, col, row + 1, col, "GOODS ON WAY", upper_header_style)
         col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "PAIR/PIECE", upper_header_style)
-        col = col + 1
-        sheet.merge_range(row, col, row + 1, col, "DISCOUNT TOTAL VALUE(after)", upper_header_style)
+        sheet.merge_range(row, col, row + 1, col, "CLOSING (WITH TRANSIT)", upper_header_style)
 
         print("@@@@@@@@@@@@@@@@ Test for Action @@@@@@@@@@@@2", data)

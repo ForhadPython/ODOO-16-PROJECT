@@ -20,15 +20,6 @@
         <field name="binding_type">report</field>
     </record>
 
-    <!--    <record id="report_mobile_data_excel_xlsx" model="ir.actions.report">-->
-    <!--        <field name="name">Mobile Data Reports Excel</field>-->
-    <!--        <field name="model">mobile.data.report.wizard</field>-->
-    <!--        <field name="report_type">xlsx</field>-->
-    <!--        <field name="report_name">custom_reports.report_mobile_data_excel_xlsx</field>-->
-    <!--        <field name="report_file">custom_reports.report_mobile_data_excel_xlsx</field>-->
-    <!--        <field name="binding_type">report</field>-->
-    <!--    </record>-->
-
     <record id="report_all_current_stock_excel_xlsx" model="ir.actions.report">
         <field name="name">Current Stock Barcode Report Excel</field>
         <field name="model">current.stock.barcode.report.wizard</field>
@@ -37,15 +28,6 @@
         <field name="report_file">custom_reports.report_all_current_stock_excel_xlsx</field>
         <field name="binding_type">report</field>
     </record>
-
-<!--    <record id="account_payment_transaction_excel_xlsx" model="ir.actions.report">-->
-<!--        <field name="name">Account Payment Transaction Report Excel</field>-->
-<!--        <field name="model">account.payment.transaction.report.wizard</field>-->
-<!--        <field name="report_type">xlsx</field>-->
-<!--        <field name="report_name">custom_reports.report_account_payment_transaction_excel_xlsx</field>-->
-<!--        <field name="report_file">custom_reports.report_account_payment_transaction_excel_xlsx</field>-->
-<!--        <field name="binding_type">report</field>-->
-<!--    </record>-->
 
     <record id="payment_transaction_excel_xlsx" model="ir.actions.report">
         <field name="name">Account Payment Transaction Report Excel</field>
@@ -71,6 +53,15 @@
         <field name="report_type">xlsx</field>
         <field name="report_name">custom_reports.daily_sales_datewise_excel_xlsx</field>
         <field name="report_file">custom_reports.daily_sales_datewise_excel_xlsx</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="recap_shop_report_excel_xlsx" model="ir.actions.report">
+        <field name="name">Recap Shop Report Excel</field>
+        <field name="model">recap.shop.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_reports.recap_shop_report_excel_xlsx</field>
+        <field name="report_file">custom_reports.recap_shop_report_excel_xlsx</field>
         <field name="binding_type">report</field>
     </record>
 

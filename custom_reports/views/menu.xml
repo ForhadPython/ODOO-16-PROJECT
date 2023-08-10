@@ -28,4 +28,10 @@
               action="action_reports_action_data"
               parent="menu_bay_reports"
               sequence="0"/>
+
+    <menuitem id="menu_reports_root_pos_report"
+              name="POS Reports"
+              action="action_reports_action_data"
+              parent="menu_reports_root"
+              sequence="0"/>
 </odoo>

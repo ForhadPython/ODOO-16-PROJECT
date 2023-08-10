@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<!-- Recap Shop report form view-->
+		<record id="recap_shop_report_wizard_form_view" model="ir.ui.view">
+			<field name="name">recap.shop.report.wizard.form.view</field>
+			<field name="model">recap.shop.report.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Recap Shop Report">
+					<group>
+						<group>
+							<field name="from_date" />
+							<field name="to_date" />
+						</group>
+						<group>
+							<field name="store_zone_id" />
+							<field name="location_id"/>
+						</group>
+						<group>
+							<field name="old_gura_claim_show"/>
+							<field name="adjustment_show"/>
+						</group>
+					</group>
+					<footer>
+						<button name="action_recap_shop_report" string="Generate Report"
+							type="object" class="oe_highlight" help="Generate recap report with cost value"/>
+						or
+						<button name='cancel' string="Cancel" class="btn-danger" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="recap_shop_report_wizard_action_view" model="ir.actions.act_window">
+			<field name="name">Recap Shop Report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">recap.shop.report.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="action_recap_shop_report_menu" name="Recap Shop Report"
+				  parent="menu_reports_root" action="recap_shop_report_wizard_action_view"
+				  sequence="80"/>
+
+	</data>
+</odoo>
